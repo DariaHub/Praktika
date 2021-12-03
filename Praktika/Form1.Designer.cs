@@ -28,6 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
+ zadanie_1_2
+            this.btnAW_BLEND = new System.Windows.Forms.Button();
+            this.btnHOR_AW_SLIDE = new System.Windows.Forms.Button();
+            this.btnCenter_AW_SLIDE = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnAW_BLEND
+            // 
+            this.btnAW_BLEND.Location = new System.Drawing.Point(30, 62);
+            this.btnAW_BLEND.Name = "btnAW_BLEND";
+            this.btnAW_BLEND.Size = new System.Drawing.Size(232, 23);
+            this.btnAW_BLEND.TabIndex = 0;
+            this.btnAW_BLEND.Text = "Проявление";
+            this.btnAW_BLEND.UseVisualStyleBackColor = true;
+            this.btnAW_BLEND.Click += new System.EventHandler(this.btnAW_BLEND_Click);
+            // 
+            // btnHOR_AW_SLIDE
+            // 
+            this.btnHOR_AW_SLIDE.Location = new System.Drawing.Point(30, 118);
+            this.btnHOR_AW_SLIDE.Name = "btnHOR_AW_SLIDE";
+            this.btnHOR_AW_SLIDE.Size = new System.Drawing.Size(232, 23);
+            this.btnHOR_AW_SLIDE.TabIndex = 1;
+            this.btnHOR_AW_SLIDE.Text = "Горизонтальное появление";
+            this.btnHOR_AW_SLIDE.UseVisualStyleBackColor = true;
+            this.btnHOR_AW_SLIDE.Click += new System.EventHandler(this.btnHOR_AW_SLIDE_Click);
+            // 
+            // btnCenter_AW_SLIDE
+            // 
+            this.btnCenter_AW_SLIDE.Location = new System.Drawing.Point(30, 182);
+            this.btnCenter_AW_SLIDE.Name = "btnCenter_AW_SLIDE";
+            this.btnCenter_AW_SLIDE.Size = new System.Drawing.Size(232, 23);
+            this.btnCenter_AW_SLIDE.TabIndex = 2;
+            this.btnCenter_AW_SLIDE.Text = "Появление из центра";
+            this.btnCenter_AW_SLIDE.UseVisualStyleBackColor = true;
+            this.btnCenter_AW_SLIDE.Click += new System.EventHandler(this.btnCenter_AW_SLIDE_Click);
+
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -80,11 +116,22 @@
             this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
             this.axAcroPDF1.Size = new System.Drawing.Size(162, 163);
             this.axAcroPDF1.TabIndex = 1;
+ zadanie_1
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+ zadanie_1_2
+            this.ClientSize = new System.Drawing.Size(712, 450);
+            this.Controls.Add(this.btnCenter_AW_SLIDE);
+            this.Controls.Add(this.btnHOR_AW_SLIDE);
+            this.Controls.Add(this.btnAW_BLEND);
+            this.Name = "Form1";
+            this.Text = "Анимация формы";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.axAcroPDF1);
             this.Controls.Add(this.menuStrip1);
@@ -97,10 +144,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+ zadanie_1
 
         }
 
         #endregion
+
+ zadanie_1_2
+        private System.Windows.Forms.Button btnAW_BLEND;
+        private System.Windows.Forms.Button btnHOR_AW_SLIDE;
+        private System.Windows.Forms.Button btnCenter_AW_SLIDE;
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
@@ -108,6 +161,7 @@
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
+ zadanie_1
     }
 }
 
