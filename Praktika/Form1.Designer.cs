@@ -106,7 +106,10 @@
             this.Controls.Add(this.btnWork);
             this.Controls.Add(this.btnRun);
             this.Name = "Form1";
+ zadanie_2_3
             this.Text = "Ассинхронный запуск";
+            this.Text = "Form1";
+ zadanie_2
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
