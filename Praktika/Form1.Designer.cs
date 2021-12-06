@@ -34,12 +34,20 @@
             this.txbB = new System.Windows.Forms.TextBox();
             this.btnRun = new System.Windows.Forms.Button();
             this.btnWork = new System.Windows.Forms.Button();
+ zadanie_3_2
+            this.button1 = new System.Windows.Forms.Button();
+
+ zadanie_3
             this.SuspendLayout();
             // 
             // lblA
             // 
             this.lblA.AutoSize = true;
+ zadanie_3_2
+            this.lblA.Location = new System.Drawing.Point(35, 32);
+
             this.lblA.Location = new System.Drawing.Point(28, 37);
+zadanie_3
             this.lblA.Name = "lblA";
             this.lblA.Size = new System.Drawing.Size(65, 13);
             this.lblA.TabIndex = 1;
@@ -47,7 +55,11 @@
             // 
             // txbA
             // 
+ zadanie_3_2
+            this.txbA.Location = new System.Drawing.Point(106, 29);
+
             this.txbA.Location = new System.Drawing.Point(112, 34);
+ zadanie_3
             this.txbA.Name = "txbA";
             this.txbA.Size = new System.Drawing.Size(100, 20);
             this.txbA.TabIndex = 3;
@@ -55,7 +67,11 @@
             // lblB
             // 
             this.lblB.AutoSize = true;
+ zadanie_3_2
+            this.lblB.Location = new System.Drawing.Point(232, 32);
+
             this.lblB.Location = new System.Drawing.Point(259, 37);
+ zadanie_3
             this.lblB.Name = "lblB";
             this.lblB.Size = new System.Drawing.Size(65, 13);
             this.lblB.TabIndex = 4;
@@ -63,14 +79,22 @@
             // 
             // txbB
             // 
+ zadanie_3_2
+            this.txbB.Location = new System.Drawing.Point(303, 29);
+
             this.txbB.Location = new System.Drawing.Point(330, 34);
+ zadanie_3
             this.txbB.Name = "txbB";
             this.txbB.Size = new System.Drawing.Size(100, 20);
             this.txbB.TabIndex = 5;
             // 
             // btnRun
             // 
+ zadanie_3_2
+            this.btnRun.Location = new System.Drawing.Point(38, 95);
+
             this.btnRun.Location = new System.Drawing.Point(45, 103);
+ zadanie_3
             this.btnRun.Name = "btnRun";
             this.btnRun.Size = new System.Drawing.Size(75, 23);
             this.btnRun.TabIndex = 6;
@@ -79,18 +103,39 @@
             // 
             // btnWork
             // 
+ zadanie_3_2
+            this.btnWork.Location = new System.Drawing.Point(131, 161);
+
             this.btnWork.Location = new System.Drawing.Point(189, 103);
+ zadanie_3
             this.btnWork.Name = "btnWork";
             this.btnWork.Size = new System.Drawing.Size(75, 23);
             this.btnWork.TabIndex = 7;
             this.btnWork.Text = "Работа";
             this.btnWork.UseVisualStyleBackColor = true;
             // 
+ zadanie_3_2
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(303, 107);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Help";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+
+ zadanie_3
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+ zadanie_3_2
+            this.ClientSize = new System.Drawing.Size(466, 219);
+            this.Controls.Add(this.button1);
+
             this.ClientSize = new System.Drawing.Size(485, 174);
+ zadanie_3
             this.Controls.Add(this.btnWork);
             this.Controls.Add(this.btnRun);
             this.Controls.Add(this.txbB);
@@ -113,6 +158,11 @@
         private System.Windows.Forms.TextBox txbB;
         private System.Windows.Forms.Button btnRun;
         private System.Windows.Forms.Button btnWork;
+ zadanie_3_2
+        private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.Button button1;
+
+ zadanie_3
     }
 }
 
