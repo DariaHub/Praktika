@@ -17,16 +17,42 @@ namespace Praktika
             InitializeComponent();
         }
 
+ zadanie_2_3
+        private delegate int AsyncSumm(int a, int b);
+
+        AsyncSumm summdelegate = new AsyncSumm(Summ);
+
+        static private int Summ(int a, int b)
+
         bool Cancel;
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+ zadanie_2
         {
-            if (!char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-                MessageBox.Show("Поле должно содержать цифры");
-            }
+            System.Threading.Thread.Sleep(9000);
+            return a + b;
         }
+
+        private void btnRun_Click(object sender, EventArgs e)
+        {
+            int a, b;
+
+            try
+            {
+                a = Int32.Parse(txtA.Text);
+                b = Int32.Parse(txtB.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("При выполнении преобразования типов возникла ошибка");
+                txtA.Text = txtB.Text = "";
+                return;
+            }
+
+ zadanie_2_3
+            AsyncSumm summdelegate = new AsyncSumm(Summ);
+            AsyncCallback cb = new AsyncCallback(CallBackMethod);
+            summdelegate.BeginInvoke(a, b, cb, summdelegate);
 
         public delegate void SerProgressDelegate(int val);
 
@@ -62,49 +88,41 @@ namespace Praktika
             {
                 System.Windows.Forms.MessageBox.Show("Complete");
             }
+ zadanie_2
         }
 
+        private void CallBackMethod(IAsyncResult ar)
+        {
+            string str;
+            AsyncSumm summdelegate = (AsyncSumm)ar.AsyncState;
+            str = String.Format("Сумма введенных чисел равна {0}", summdelegate.EndInvoke(ar));
+            MessageBox.Show(str, "Результат операции");
+        }
+
+        private void btnWork_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Работа кипит!!!");
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+        }
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            int i;
-            i = int.Parse(e.Argument.ToString());
-            for (int j = 1; j <= i; j++)
-            {
-                if (backgroundWorker1.CancellationPending)
-
-                {
-                    e.Cancel = true;
-                    return;
-                }
-                System.Threading.Thread.Sleep(1000);
-                backgroundWorker1.ReportProgress((int)(j * 100 / i));
-            }
         }
-
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            progressBar1.Value = e.ProgressPercentage;
         }
-
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            if (!(e.Cancelled))
-                System.Windows.Forms.MessageBox.Show("Run Completed!");
-            else
-                System.Windows.Forms.MessageBox.Show("Run Cancelled");
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            if (!(textBox1.Text == ""))
-            {
-                int i = int.Parse(textBox1.Text);
-                backgroundWorker1.RunWorkerAsync(i);
-            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            backgroundWorker1.CancelAsync();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
