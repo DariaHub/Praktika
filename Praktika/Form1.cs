@@ -16,7 +16,14 @@ namespace Praktika
         {
             InitializeComponent();
         }
+ zadanie_3_3
 
+
+ zadanie_3_2
+
+
+ zadanie_3
+ zadanie_3
         private delegate int AsyncSumm(int a, int b);
         private int Summ(int a, int b)
         {
@@ -26,6 +33,10 @@ namespace Praktika
 
         private void btnRun_Click(object sender, EventArgs e)
         {
+ zadanie_3_3
+
+ zadanie_3_2
+ zadanie_3
             int a, b;
 
             try
@@ -43,6 +54,12 @@ namespace Praktika
             AsyncSumm summdelegate = new AsyncSumm(Summ);
             AsyncCallback cb = new AsyncCallback(CallBackMethod);
             summdelegate.BeginInvoke(a, b, cb, summdelegate);
+ zadanie_3_3
+
+
+
+ zadanie_3
+ zadanie_3
         }
 
         private void CallBackMethod(IAsyncResult ar)
@@ -58,9 +75,22 @@ namespace Praktika
             MessageBox.Show("Работа кипит!!!");
         }
 
+ zadanie_3_3
+
+ zadanie_3_2
+ zadanie_3
         private void button1_Click(object sender, EventArgs e)
         {
             Help.ShowHelp(this, helpProvider1.HelpNamespace);
         }
+ zadanie_3_3
+
+
+ zadanie_3
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+ zadanie_3
     }
 }
